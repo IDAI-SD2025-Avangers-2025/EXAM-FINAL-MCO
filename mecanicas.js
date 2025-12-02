@@ -3,17 +3,18 @@ var nombreUsuario = perfilCard.querySelector('h2');
 var ocupacion = perfilCard.querySelector('p');
 
 let esMasculino = true;
+let nombreOriginal = nombreUsuario.textContent;
+let ocupacionOriginal = ocupacion.textContent;
 
 function cambiarGenero() {
     if(esMasculino) {
-        nombreUsuario.textContent = nombreUsuario.textContent.replace(/o$/, 'a');
-        ocupacion.textContent = ocupacion.textContent.replace(/o$/, 'a');
+        nombreUsuario.textContent = nombreUsuario.textContent.replace("Mauricio", "Mauricia");
+        ocupacion.textContent = ocupacion.textContent.replace("Ingeniero", "Ingeniera");
         alert("Se han hecho cambios en los datos del perfil");
         esMasculino = false;
-    }
-    else {S
-        nombreUsuario.textContent = "Mauricia Campos Orozca";
-        ocupacion.textContent = "Estudiante a Ingeniero";
+    } else {
+        nombreUsuario.textContent = nombreOriginal;
+        ocupacion.textContent = ocupacionOriginal;
         alert("Se han hecho cambios en los datos del perfil");
         esMasculino = true;
     }
